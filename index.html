@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" types="text/css" href="style.css">
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Mencegah scroll */
+        }
+
+        .video-background{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; /* Menempatkan video di belakang konten lain */
+            transform: translate(-50%, -50%);
+        }
+        
+        .content{
+            position: relative;
+            z-index: 1; /* Menempatkan konten di depan video */
+            color: white; /* Warna teks agar terlihat di atas video */
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigasi">
+        <div class="logo">
+            <h2>Website Salma</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="hometown.html">Hometown</a></li>
+                <li><a href="localfood.html">Local Food</a></li>
+                <li><a href="touristplaces.html">Tourist Places</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="hello.gif">
+        <video class="video-background" autoplay loop muted>
+            <source src="video.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+        <h1>Welcome to My Website</h1>
+        <p>Thank you for visiting my website!</p>
+    </div>
+</body>
+</html>

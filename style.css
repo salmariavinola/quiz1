@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #e0f7fa; /* Warna latar belakang */
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+.navigasi{
+    background-color: #00796b;
+    color: #ffffff;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1; /* Di atas elemen lainnya */
+}
+
+.navigasi .logo h2 {
+    margin-left: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li{
+    margin-right: 20px;
+}
+
+.menu ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover{
+    color: #ffd54f; /* Warna kuning saat hover */
+}
+
+/* home */
+.banner{
+    padding: 30px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.banner img{
+    width: 180px; /* Atur lebar gambar */
+    height: 180px; /* Atur tinggi gambar */
+    margin-top: 60px;
+}
+
+.banner h1{
+    margin-bottom: 10px;
+    opacity: 0; /* Awalnya transparan */
+    transform: scale(0.5); /* Awalnya lebih kecil */
+    animation: pop-up 0.8s ease forwards; /* Menambahkan animasi */
+}
+
+.banner h2{
+    margin-bottom: 10px;
+}
+
+@keyframes pop-up{
+    0% {
+        opacity: 0; /* Mulai dari transparan */
+        transform: scale(0.5); /* Mulai dari ukuran kecil */
+    }
+    100% {
+        opacity: 1; /* Menjadi terlihat */
+        transform: scale(1); /* Menjadi ukuran normal */
+    }
+}
+/**/
+
+/* profile */
+.bannerprofile{
+    background-color: rgb(50, 174, 147);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    position: relative;
+    z-index: 1; /* Di atas partikel */
+    height: 1000px;
+    text-align: center;
+    color: white;
+}
+
+.bannerprofile img{
+    border-radius: 100px;
+    height: 150px;
+    border: 6px solid white;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    align-content: center;
+}
+
+.textprofile{
+    text-align: center; /* Centers the text */
+    max-width: 800px;   /* Limits the width of the text container */
+    margin: 0 auto;     /* Centers the container horizontally */
+    padding: 20px;      /* Adds padding around the text */
+}
+
+.textprofile h2{
+    margin-bottom: 10px;
+}
+
+.textprofile p{
+    line-height: 1.6;   /* Improves readability by increasing line height */
+}
+
+.kotak img{
+    border-radius: 200px;
+    height: 150px;
+    border: 6px solid white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    align-content: center;
+}
+
+.box-kiri, .box-tengah, .box-kanan{
+    width: 300px;
+    height: 320px;
+    background-color: beige;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 20px 10px 20px 60px;
+    border-radius: 10px;
+    float: left;
+}
+
+.box-kiri a{
+    text-decoration: none; /* untuk menghilangkan underline supaya tampilan lebih bagus */
+}
+ 
+.box-tengah a{
+    text-decoration: none; /* untuk menghilangkan underline supaya tampilan lebih bagus */
+}
+
+.box-kanan a{
+    text-decoration: none; /* untuk menghilangkan underline supaya tampilan lebih bagus */
+}
+
+.box-kiri:hover, .box-tengah:hover, .box-kanan:hover{
+    background-color: #d9d26f;
+    color: white;
+}
+
+.kotak h2{
+    margin-top: 10px
+}
+.kotak h3{
+    text-align: center;
+    color: #4d4d4d;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    align-content: center;
+    font-size: medium;
+}
+
+.kotak p{
+    color: chocolate;
+}
+/**/
+
+/*hometown*/
+.bannerhometown {
+    background-color: #ffffff; /* Latar belakang putih */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    position: relative;
+    z-index: 1; /* Di atas partikel */
+}
+
+.image-container{
+    display: flex;
+    justify-content: center; /* Menengahkan gambar secara horizontal */
+    align-items: center; /* Menengahkan gambar secara vertikal */
+    height: 100%; /* Opsional, bisa disesuaikan dengan tinggi kontainer */
+}
+
+.image-container img{
+    max-width: 100%;
+    border-radius: 10px; /* Sudut membulat pada gambar */
+    height: 500px;
+    transition: transform 0.3s ease; /* Efek zoom */
+}
+
+.image-container img:hover{
+    transform: scale(1.05); /* Zoom saat hover */
+}
+
+.hometown h2{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #00796b;
+}
+
+.text-content h3{
+    text-align: center;
+    margin-top: 20px;
+    color: #00796b; /* Warna hijau */
+}
+
+.text-content p{
+    text-align: center; /* Centers the text */
+    max-width: 1000px;   /* Limits the width of the text container */
+    margin: 0 auto;     /* Centers the container horizontally */
+    padding: 20px;      /* Adds padding around the text */
+    line-height: 1.8;   
+    margin-top: 10px;
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.text-content p:hover {
+    color: #c9a506; /* Warna berubah saat hover */
+}
+/**/
+
+/* local food*/
+.bannerlocalfood{
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Warna latar belakang putih */
+    margin: 20px;
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    position: relative;
+    z-index: 1; /* Di atas elemen lainnya */
+}
+
+.bannerlocalfood h2 {
+    color: #00796b; /* Warna hijau */
+    margin-bottom: 10px;
+}
+
+.bannerlocalfood p {
+    color: #555; /* Warna teks */
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Pusatkan galeri */
+    gap: 10px; /* Jarak antar gambar */
+}
+
+.photo-container {
+    position: relative;
+    width: 300px; /* Lebar tetap untuk semua gambar */
+    height: 200px; /* Tinggi tetap untuk semua gambar */
+    overflow: hidden; /* Menghindari gambar melampaui wadah */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar akan menutupi area dan tidak terdistorsi */
+    transition: transform 0.3s ease; /* Efek zoom */
+}
+
+.photo-container img:hover {
+    transform: scale(1.05); /* Zoom saat hover */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang gelap dengan transparansi */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease; /* Transisi saat muncul */
+    opacity: 0; /* Awalnya tersembunyi */
+}
+
+.photo-container:hover .overlay {
+    opacity: 1; /* Tampilkan saat hover */
+}
+
+.description {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan */
+    color: #333; /* Warna teks gelap */
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px; /* Sudut membulat */
+    opacity: 0; /* Awalnya tersembunyi */
+    transition: opacity 0.3s ease; /* Transisi saat muncul */
+}
+
+.photo-container:hover .description {
+    opacity: 1; /* Tampilkan saat hover */
+}
+/**/
+
+/*tourits*/
+.bannertouristplaces{
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Warna latar belakang putih */
+    margin: 20px;
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan */
+    position: relative;
+    z-index: 1; /* Di atas elemen lainnya */
+}
+
+.bannertouristplaces h2{
+    color: #00796b; /* Warna hijau */
+    margin-bottom: 10px;
+}
+
+.bannertouristplaces p{
+    color: #555; /* Warna teks */
+    margin-bottom: 20px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Pusatkan galeri */
+    gap: 10px; /* Jarak antar gambar */
+}
+
+.photo-container {
+    position: relative;
+    width: 300px; /* Lebar tetap untuk semua gambar */
+    height: 200px; /* Tinggi tetap untuk semua gambar */
+    overflow: hidden; /* Menghindari gambar melampaui wadah */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+.photo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar akan menutupi area dan tidak terdistorsi */
+    transition: transform 0.3s ease; /* Efek zoom */
+    border-radius: 10px; /* Sudut membulat pada gambar */
+}
+
+.photo-container img:hover {
+    transform: scale(1.05); /* Zoom saat hover */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang gelap dengan transparansi */
+    color: #ffffff; /* Warna teks putih */
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.3s ease; /* Transisi saat muncul */
+    opacity: 0; /* Awalnya tersembunyi */
+}
+
+/* Tampilkan teks saat dihover */
+.photo-container:hover .overlay {
+    opacity: 1;
+}
+
+.description {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: rgba(142, 205, 186, 0.8); /* Latar belakang putih transparan */
+    color: #333; /* Warna teks gelap */
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px; /* Sudut membulat */
+    opacity: 0; /* Awalnya tersembunyi */
+    transition: opacity 0.3s ease; /* Transisi saat muncul */
+}
+
+.photo-container:hover .description {
+    opacity: 1; /* Tampilkan saat hover */
+}
+/**/
+
+/*untuk semua*/
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #00796b; /* Warna hijau tua */
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Jarak di atas footer */
+}
